@@ -54,9 +54,8 @@ public class AgendaController {
         }
     }
 
-    // Área logada para professores
     @GetMapping("/professor/meu/agenda")
-    public ResponseEntity<List<Agenda>> getMinhaAgenda(@RequestParam Long professorId) { // Assuming you have a way to identify the logged-in professor
+    public ResponseEntity<List<Agenda>> getMinhaAgenda(@RequestParam Long professorId) {
         return ResponseEntity.ok(agendaService.getProfessorAgendaAndCursos(professorId));
     }
 }

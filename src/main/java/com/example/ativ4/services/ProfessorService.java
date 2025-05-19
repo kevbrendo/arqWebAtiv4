@@ -35,8 +35,6 @@ public class ProfessorService {
     public List<Curso> findProfessorCursosAndSchedules(Long professorId) {
         Optional<Professor> professorOptional = professorRepository.findById(professorId);
         return professorOptional.map(Professor::getCursos).orElse(List.of());
-        // You'll likely need to fetch the agenda details here as well,
-        // perhaps by joining with the Agenda repository.
     }
 
     public Optional<Professor> findProfessorDetails(Long professorId) {
