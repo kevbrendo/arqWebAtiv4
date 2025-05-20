@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.List;
 
@@ -31,4 +33,5 @@ public class Curso {
             inverseJoinColumns = @JoinColumn(name = "professor_id")
     )
     private List<Professor> professores;
+
 }

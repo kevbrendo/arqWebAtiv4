@@ -32,6 +32,7 @@ public class AgendaService {
             throw new EspecialidadeIncompativelException("Professor não possui a especialidade para este curso.");
         }
 
+
         List<Agenda> agendasConflitantes = agendaRepository.findOverlappingAgendas(professorId, inicio, fim);
         if (!agendasConflitantes.isEmpty()) {
             throw new AgendaNaoDisponivelException("A agenda para este professor já está preenchida neste horário.");
